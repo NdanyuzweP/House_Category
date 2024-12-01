@@ -9,7 +9,7 @@ Check out the video demonstration of the project: [Watch on YouTube](https://www
 ##  Project Repository  
 
 Access the repository here: [House Prediction GitHub Repo](https://github.com/NdanyuzweP/House_Category).  
-Access the deployed model and API here: https://house-category-1.onrender.com
+Access the deployed model and API here: https://house-category-1.onrender.com/doc
 
 ---
 
