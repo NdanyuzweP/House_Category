@@ -15,7 +15,9 @@ scaler = joblib.load('./models/scaler.pkl')
 # Initialize FastAPI app
 app = FastAPI()
 
-
+@app.get("/")
+def read_root():
+    return {"message": "Hello from Render!"}
 
 # Define the input data model
 class HouseData(BaseModel):
