@@ -1,4 +1,4 @@
-# House Price Prediction  
+# House Category Prediction  
 
 ## 📽 Video Demo  
 
@@ -15,10 +15,10 @@ Access the deployed model and API here: https://house-category-1.onrender.com/do
 
 ## Project Description  
 
-The **House Price Prediction** project leverages machine learning to predict house prices based on various features such as size, location, and other relevant attributes. This project demonstrates:  
+The **House Category Prediction** project leverages machine learning to predict house Category based on various features such as size, location, and other relevant attributes. This project demonstrates:  
 
 - **Data preprocessing**: Cleaning and preparing raw data for modeling.  
-- **Model training**: Implementing and optimizing a machine learning algorithm for price prediction.  
+- **Model training**: Implementing and optimizing a machine learning algorithm for Category prediction.  
 - **Evaluation**: Assessing the model’s performance and accuracy using metrics such as Mean Squared Error (MSE).  
 - **Deployment**: Making predictions accessible through a user-friendly interface.  
 
@@ -38,8 +38,8 @@ Ensure the following tools and dependencies are installed:
 
 1. Clone the repository:  
    ```bash
-   git clone https://github.com/NdanyuzweP/house_prediction.git
-   cd house_prediction
+   git clone https://github.com/NdanyuzweP/House_Category.git
+   cd House_Category
 
 2. Set up a virtual environment
    ```bash
