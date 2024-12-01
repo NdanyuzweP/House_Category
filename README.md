@@ -39,3 +39,17 @@ Ensure the following tools and dependencies are installed:
    ```bash
    git clone https://github.com/NdanyuzweP/house_prediction.git
    cd house_prediction
+
+2. Set up a virtual environment
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows, use 'venv\Scripts\activate'
+
+3. Install required dependencies
+   ```bash
+   pip install -r requirements.txt
+
+4. Run the application or model training script
+   ```bash
+   uvicorn main:app --reload --port 8080
+
