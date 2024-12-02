@@ -12,14 +12,11 @@ from io import StringIO
 model = tf.keras.models.load_model("models/house_model.h5")
 scaler = joblib.load('./models/scaler.pkl')
 
-# Initialize FastAPI app
+# Initializing FastAPI app
 app = FastAPI()
 
-@app.get("/")
-def read_root():
-    return {"message": "Hello from Render!"}
 
-# Define the input data model
+# Defining the input data model
 class HouseData(BaseModel):
     squareMeters: float
     numberOfRooms: int
@@ -95,17 +92,20 @@ async def retrain(file: UploadFile = File(...)):
     ]
     
     if not all(col in data.columns for col in expected_columns):
-        return {"error": "Invalid data format. Columns do not match the required format."}
+        missing_columns = [col for col in expected_columns if col not in data.columns]
+        return {"error": f"Invalid data format. Missing columns: {missing_columns}"}
     
-    # Separate features and target
-    X = data.drop("price", axis=1)  # Features
-    y = data["price"]  # Target
+    # Scale the data including 'price' to match scaler's expectations
+    scaled_data = data.copy()
+    columns_to_scale = ["squareMeters", "made", "basement", "attic", "garage", "price"]
+    scaled_data[columns_to_scale] = scaler.transform(scaled_data[columns_to_scale])
     
-    # Scale features using the same scaler used during training
-    X_scaled = scaler.transform(X)
-
+    # Separate features (X) and target (y)
+    X = scaled_data.drop("price", axis=1)  # Features
+    y = scaled_data["price"]  # Target
+    
     # Retrain the model
-    model.fit(X_scaled, y, epochs=10, batch_size=32, verbose=1)
+    model.fit(X.to_numpy(), y.to_numpy(), epochs=10, batch_size=32, verbose=1)
     
     # Save the retrained model
     model.save("models/house_model.h5")
