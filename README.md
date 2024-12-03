@@ -2,7 +2,7 @@
 
 ## 📽 Video Demo  
 
-Check out the video demonstration of the project: [Watch on YouTube](https://www.youtube.com/link-to-demo).  
+Check out the video demonstration of the project: [Watch on YouTube]([https://www.youtube.com/link-to-demo](https://youtu.be/2VmEhazhHIk)).  
 
 ---
 
@@ -53,4 +53,6 @@ Ensure the following tools and dependencies are installed:
 4. Run the application or model training script
    ```bash
    uvicorn main:app --reload --port 8080
+
+
 
