@@ -2,7 +2,7 @@
 
 ## 📽 Video Demo  
 
-Check out the video demonstration of the project: [Watch on YouTube]([https://www.youtube.com/link-to-demo](https://youtu.be/2VmEhazhHIk)).  
+Check out the video demonstration of the project: [Watch on YouTube](https://youtu.be/2VmEhazhHIk)).  
 
 ---
 
