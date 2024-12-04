@@ -11,6 +11,8 @@ Check out the video demonstration of the project: [Watch on YouTube]([https://ww
 Access the repository here: [House Prediction GitHub Repo](https://github.com/NdanyuzweP/House_Category).  
 Access the deployed model and API here: https://house-category-1.onrender.com/doc
 
+Also there is Dockerfile with docker image
+
 ---
 
 ## Project Description  
@@ -51,6 +53,34 @@ Ensure the following tools and dependencies are installed:
    pip install -r requirements.txt
 
 4. Run the application or model training script
+   ```bash
+   uvicorn main:app --reload --port 8080
+
+
+### Steps to Run Frontend
+
+1. Clone the repository:  
+   ```bash
+   git clone https://github.com/NdanyuzweP/House_Category.git
+   cd House_Category
+   cd frontend/house_predictions
+   cd src
+
+2. run react app
+   ```bash
+   npm start
+   
+
+
+
+### Steps to Run Backend (API)
+
+1. Clone the repository:  
+   ```bash
+   git clone https://github.com/NdanyuzweP/House_Category.git
+   cd House_Category
+
+2. Set run fastapi
    ```bash
    uvicorn main:app --reload --port 8080
 

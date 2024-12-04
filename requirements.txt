@@ -18,3 +18,5 @@ typing_extensions==4.12.2
 uvicorn==0.32.1
 wheel==0.44.0
 pandas
+flask
+requests
